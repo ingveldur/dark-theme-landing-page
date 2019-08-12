@@ -1,0 +1,22 @@
+---
+label: Header
+hide_body: true
+fields:
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Slug
+- name: icon
+  type: file
+  config:
+    maxSize: 250
+  label: Icon
+- name: links
+  type: blocks
+  template_types:
+  - link
+  config:
+    min: 
+    max: 
+  label: Links

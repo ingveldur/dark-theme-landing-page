@@ -1,0 +1,26 @@
+---
+label: Testimonial
+hide_body: true
+fields:
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Slug
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Description
+- name: author
+  type: blocks
+  label: Author
+  template_types:
+  - author
+  config:
+    min: 
+    max: 

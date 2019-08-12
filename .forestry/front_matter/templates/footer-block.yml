@@ -1,0 +1,18 @@
+---
+label: Footer block
+hide_body: true
+fields:
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Slug
+- name: items
+  type: blocks
+  label: Items
+  template_types:
+  - text-block
+  - link
+  config:
+    min: 
+    max: 

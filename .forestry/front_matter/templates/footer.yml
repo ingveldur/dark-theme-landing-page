@@ -1,0 +1,22 @@
+---
+label: Footer
+hide_body: true
+fields:
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Slug
+- name: logo
+  type: file
+  config:
+    maxSize: 250
+  label: Logo
+- name: blocks
+  type: blocks
+  template_types:
+  - footer-block
+  config:
+    min: 
+    max: 
+  label: Blocks

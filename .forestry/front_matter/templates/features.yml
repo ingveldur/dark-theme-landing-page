@@ -1,0 +1,17 @@
+---
+label: Features
+hide_body: false
+fields:
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Slug
+- name: blocks
+  type: blocks
+  label: Blocks
+  template_types:
+  - text-block
+  config:
+    min: 
+    max: 

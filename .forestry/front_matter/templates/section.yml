@@ -1,0 +1,29 @@
+---
+label: Section
+hide_body: true
+fields:
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Slug
+- name: blocks
+  type: blocks
+  label: Blocks
+  template_types:
+  - header
+  - features
+  - text-block
+  - footer
+  - testimonial
+  config:
+    min: 
+    max: 
+pages:
+- content/footer.md
+- content/header.md
+- content/intro.md
+- content/features.md
+- content/stay-productive.md
+- content/testimonials.md
+- content/get-early-access.md
