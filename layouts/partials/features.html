@@ -1,0 +1,15 @@
+<div class="features">
+    {{ with .Site.GetPage "/features" }}
+    {{ range.Params.Blocks }}
+    <div class="row">
+        {{ range .blocks }}
+        <div class="column">
+            <img src="{{.image}}" />
+            <div class="title">{{.title}}</div>
+            <div class="description"> {{.description}}</div>
+        </div>
+        {{ end }}
+    </div>
+    {{ end }}
+    {{ end }}
+</div>
