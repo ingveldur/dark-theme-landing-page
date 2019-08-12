@@ -1,12 +1,16 @@
 <div class="intro">
-    <img src="" />
+    {{ with .Site.GetPage "/intro" }}
+    {{ range.Params.Blocks }}
+    <img src="{{ .image }}" />
     <div class="title">
-
+        {{.title }}
     </div>
     <div class="description">
-
+        {{ .description }}
     </div>
-    <a class="" href="">
-
-    </a>
+    {{ range.link }}
+    {{ partial "components/button.html" .}}
+    {{ end }}
+    {{ end }}
+    {{ end }}
 </div>

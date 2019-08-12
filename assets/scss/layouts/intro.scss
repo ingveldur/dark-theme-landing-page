@@ -1,0 +1,57 @@
+@import "./utils/colors.scss";
+@import "./utils/mixins.scss";
+
+.intro {
+    text-align: center;
+    position: relative;
+    margin: 40px 24px 80px;
+
+    @include smallerThanDesktop {
+        margin: 30px 16px 80px;
+    }
+
+    img {
+        width: 500px;
+        max-width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .title {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 40px;
+        margin: auto auto 16px;
+        width: 600px;
+        max-width: 100%;
+
+
+        @include smallerThanDesktop {
+            font-size: 24px;
+            line-height: 36px;
+            width: 400px;
+        }
+    }
+
+    .description {
+        font-size: 14px;
+        line-height: 20px;
+        margin: auto auto 36px;
+        width: 460px;
+        max-width: 100%;
+        letter-spacing: 0.5px;
+
+        @include smallerThanDesktop {
+            margin: auto auto 30px;
+        }
+    }
+
+    .button {
+        background: linear-gradient(to bottom right, $color-cyan, $color-blue);
+        color: $color-white;
+        text-decoration: none;
+        padding: 12px 60px;
+        border-radius: 30px;
+        font-size: 12px;
+    }
+}
