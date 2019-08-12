@@ -1,0 +1,54 @@
+@import "./utils/colors.scss";
+@import "./utils/mixins.scss";
+
+
+header {
+    display: flex;
+
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+
+    @include smallerThanDesktop {
+        height: 80px;
+    }
+
+    .logo {
+        margin: 0 40px;
+
+        @include smallerThanDesktop {
+            margin: 0 20px;
+        }
+
+        img {
+            width: 100px;
+
+            @include smallerThanDesktop {
+                width: 80px;
+            }
+        }
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 40px 0 auto;
+        font-size: 12px;
+        font-family: 'Raleway', sans-serif;
+
+        @include smallerThanDesktop {
+            margin: 0 20px 0 auto;
+        }
+
+        a {
+            margin: auto 16px;
+            text-decoration: none;
+            color: $color-white;
+
+            @include smallerThanDesktop {
+                margin: auto 8px;
+            }
+        }
+    }
+}
