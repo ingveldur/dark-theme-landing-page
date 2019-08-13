@@ -22,6 +22,7 @@
         padding: 20px;
         margin: 0 16px;
         z-index: 2;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
 
         @include smallerThanDesktop {
             margin: 0 auto 24px;

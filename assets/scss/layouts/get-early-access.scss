@@ -1,0 +1,44 @@
+@import "./utils/colors.scss";
+@import "./utils/mixins.scss";
+
+.get-early-access {
+    width: 550px;
+    background: $dark-blue;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+
+    .title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 36px;
+        margin-bottom: 12px;
+    }
+
+    .description {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 24px;
+    }
+
+    input {
+        width: 300px;
+        border-radius: 16px;
+        border: 0;
+        margin-right: 16px;
+        padding: 10px 20px;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    input::placeholder {
+        color: lightgray;
+    }
+
+    a {
+        padding: 10px 20px;
+    }
+}
