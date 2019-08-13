@@ -1,0 +1,26 @@
+<div class="testimonials">
+    {{ with .Site.GetPage "/testimonials" }}
+    {{ range .Params.Blocks }}
+    <div class="testimonial">
+        <div class="description">
+            {{ .description | markdownify}}
+        </div>
+        <div class="author">
+            {{ range .author}}
+            <div class="icon">
+                <img src="{{.icon}}" />
+            </div>
+            <div>
+                <div class="name">
+                    {{ .name }}
+                </div>
+                <div class="subtitle">
+                    {{ .subtitle}}
+                </div>
+            </div>
+            {{ end}}
+        </div>
+    </div>
+    {{ end }}
+    {{ end }}
+</div>
