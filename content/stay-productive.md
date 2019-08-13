@@ -7,7 +7,7 @@ slug = "stay-productive"
 template = "text-block"
 title = "Stay productive, wherever you are"
 [[blocks.link]]
-icon = ""
+icon = "/uploads/right-arrow-circular-button.svg"
 label = "See how Fylo works"
 slug = "how-it-works-link"
 template = "link"

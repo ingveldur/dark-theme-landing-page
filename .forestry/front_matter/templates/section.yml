@@ -20,10 +20,10 @@ fields:
     min: 
     max: 
 pages:
+- content/stay-productive.md
 - content/footer.md
 - content/header.md
 - content/intro.md
 - content/features.md
-- content/stay-productive.md
 - content/testimonials.md
 - content/get-early-access.md
