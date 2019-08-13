@@ -4,41 +4,47 @@
 .features {
     position: relative;
     margin: 40px 24px 80px;
-    overflow: auto;
 
     @include smallerThanDesktop {
         max-width: 400px;
         margin: 30px auto 80px;
     }
 
-    .feature {
-        float: left;
-        flex: 1;
-        width: 300px;
-        text-align: center;
-        padding: 30px 50px;
+    .row {
+        margin: auto;
+        max-width: 100%;
+        width: 800px;
+        overflow: auto;
 
-        @include smallerThanDesktop {
-            width: unset;
+        .feature {
+            float: left;
+            flex: 1;
+            width: 300px;
+            text-align: center;
+            padding: 30px 50px;
+
+            @include smallerThanDesktop {
+                width: unset;
+            }
+
+            img {
+                height: 50px;
+                margin-bottom: 12px;
+            }
+
+            .title {
+                font-weight: 700;
+                margin-bottom: 12px;
+            }
+
+            .description {
+                font-size: 12px;
+                line-height: 16px;
+            }
         }
 
-        img {
-            height: 50px;
-            margin-bottom: 12px;
+        .feature:nth-child(1) {
+            clear: left;
         }
-
-        .title {
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .description {
-            font-size: 12px;
-            line-height: 16px;
-        }
-    }
-
-    .column:nth-child(1) {
-        clear: left;
     }
 }

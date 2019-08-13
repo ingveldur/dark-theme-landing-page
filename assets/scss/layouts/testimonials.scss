@@ -4,7 +4,7 @@
 .testimonials {
     display: flex;
     justify-content: center;
-    margin: 40px 24px 80px;
+    margin: 40px auto 80px;
     padding-top: 10px;
     width: 1000px;
     max-width: 100%;
@@ -25,10 +25,10 @@
 
         @include smallerThanDesktop {
             margin: 0 auto 24px;
-        }
 
-        &:last-of-type {
-            margin: 0 auto;
+            &:last-of-type {
+                margin: 0 auto;
+            }
         }
 
         .description {
