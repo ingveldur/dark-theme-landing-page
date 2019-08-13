@@ -1,0 +1,63 @@
+@import "./utils/colors.scss";
+@import "./utils/mixins.scss";
+
+.stay-productive {
+    margin: 40px 24px 80px;
+    clear: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    @include smallerThanDesktop {
+        display: block;
+        width: calc(100% - 50px);
+        margin: auto;
+    }
+
+    .illustration {
+        text-align: center;
+
+        img {
+            width: 500px;
+            max-width: 100%;
+
+            @include smallerThanDesktop {
+                width: 380px;
+            }
+        }
+
+        @include smallerThanDesktop {
+            margin-bottom: 24px;
+        }
+    }
+
+    .title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        width: 300px;
+        max-width: 100%;
+
+        @include smallerThanDesktop {
+            font-size: 16px;
+            text-align: center;
+            line-height: unset;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+    }
+
+    .description {
+        font-size: 12px;
+        line-height: 16px;
+        width: 420px;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .link {
+        color: $color-cyan;
+        font-size: 12px;
+    }
+}

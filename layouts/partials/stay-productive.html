@@ -1,0 +1,22 @@
+<div class="stay-productive">
+    {{ with .Site.GetPage "/stay-productive" }}
+    {{ range.Params.Blocks }}
+
+    <div class="illustration">
+        <img src="{{.image}}" />
+    </div>
+    <div class="content">
+        <div class="title">
+            {{.title}}
+        </div>
+        <div class="description">
+            {{.description | markdownify}}
+        </div>
+        {{ range.link }}
+        {{ partial "components/link.html" .}}
+        {{ end }}
+
+    </div>
+    {{ end }}
+    {{ end }}
+</div>
