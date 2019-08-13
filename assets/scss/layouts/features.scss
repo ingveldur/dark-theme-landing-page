@@ -4,46 +4,43 @@
 .features {
     position: relative;
     margin: 40px 24px 80px;
+    overflow: auto;
 
     @include smallerThanDesktop {
         max-width: 400px;
-        margin: auto;
+        margin: 30px auto 80px;
     }
 
-    .row {
-        margin: auto;
-        max-width: 100%;
-        width: 800px;
+    .column {
+        float: left;
+        flex: 1;
+        width: 300px;
+        text-align: center;
+        padding: 30px 50px;
 
-        .column {
-            float: left;
-            flex: 1;
-            width: 300px;
-            text-align: center;
-            padding: 30px 50px;
-
-            @include smallerThanDesktop {
-                width: unset;
-            }
-
-            img {
-                height: 50px;
-                margin-bottom: 12px;
-            }
-
-            .title {
-                font-weight: 700;
-                margin-bottom: 12px;
-            }
-
-            .description {
-                font-size: 12px;
-                line-height: 16px;
-            }
+        @include smallerThanDesktop {
+            width: unset;
         }
 
-        .column:nth-child(1) {
-            clear: left;
+        img {
+            height: 50px;
+            margin-bottom: 12px;
+        }
+
+        .title {
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .description {
+            font-size: 12px;
+            line-height: 16px;
         }
     }
+
+    .column:nth-child(1) {
+        clear: left;
+    }
+
+    // }
 }
