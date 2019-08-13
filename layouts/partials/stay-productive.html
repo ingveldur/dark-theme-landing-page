@@ -11,11 +11,10 @@
         </div>
         <div class="description">
             {{.description | markdownify}}
+            {{ range.link }}
+            {{ partial "components/link.html" .}}
+            {{ end }}
         </div>
-        {{ range.link }}
-        {{ partial "components/link.html" .}}
-        {{ end }}
-
     </div>
     {{ end }}
     {{ end }}

@@ -17,9 +17,10 @@
 
     .illustration {
         text-align: center;
+        margin: 40px;
 
         img {
-            width: 500px;
+            width: 400px;
             max-width: 100%;
 
             @include smallerThanDesktop {
@@ -56,7 +57,7 @@
         margin: auto;
     }
 
-    .link {
+    .link a {
         color: $color-cyan;
         font-size: 12px;
     }
