@@ -1,0 +1,16 @@
+@import "./utils/colors.scss";
+@import "./utils/mixins.scss";
+
+a {
+    margin: auto 16px;
+    text-decoration: none;
+    color: $color-white;
+
+    @include smallerThanDesktop {
+        margin: auto 8px;
+    }
+}
+
+.link-icon {
+    width: 16px;
+}

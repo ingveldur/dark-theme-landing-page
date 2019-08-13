@@ -5,7 +5,10 @@
 @import "./layouts/intro.scss";
 @import "./layouts/features.scss";
 @import "./layouts/stay-productive.scss";
+
 @import "./utils/colors.scss";
+
+@import "./components/link.scss";
 
 html {
     background-color: $dark-blue-main;
