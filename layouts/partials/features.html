@@ -2,7 +2,7 @@
     {{ with .Site.GetPage "/features" }}
     {{ range.Params.Blocks }}
     {{ range .blocks }}
-    <div class="column">
+    <div class="feature">
         <img src="{{.image}}" />
         <div class="title">{{.title}}</div>
         <div class="description"> {{.description}}</div>
