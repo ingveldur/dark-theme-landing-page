@@ -9,18 +9,18 @@ icon = ""
 label = "Features"
 slug = "features-link"
 template = "link"
-url = "/features"
+url = "/#features"
 [[blocks.links]]
 icon = ""
 label = "Team"
 slug = "team-link"
 template = "link"
-url = "/team"
+url = "/#team"
 [[blocks.links]]
 icon = ""
 label = "Sign In"
 slug = "sign-in-link"
 template = "link"
-url = "/sign-in"
+url = "/#sign-in"
 
 +++

@@ -11,6 +11,6 @@ icon = ""
 label = "Get Started"
 slug = "get-started-button"
 template = "link"
-url = " /get-started"
+url = "/#get-started"
 
 +++

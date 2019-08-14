@@ -15,20 +15,20 @@
         <div class="sub-block-1">
             <img src="{{ $locationItem.image }}" />
             <div class="description">
-                {{ $locationItem.description}}
+                {{ $locationItem.description  | markdownify }}
             </div>
         </div>
         <div class="sub-block-2">
             <div>
                 <img src="{{ $phoneItem.image }}" />
                 <div class="description">
-                    {{ $phoneItem.description}}
+                    {{ $phoneItem.description | markdownify }}
                 </div>
             </div>
             <div>
                 <img src="{{ $emailItem.image }}" />
                 <div class="description">
-                    {{ $emailItem.description}}
+                    {{ $emailItem.description | markdownify }}
                 </div>
             </div>
         </div>

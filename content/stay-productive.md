@@ -11,6 +11,6 @@ icon = "/uploads/right.svg"
 label = "See how Fylo works"
 slug = "how-it-works-link"
 template = "link"
-url = "/how-it-works"
+url = "/#how-it-works"
 
 +++

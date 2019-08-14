@@ -11,6 +11,6 @@ icon = ""
 label = "Get Started For Free"
 slug = "get-started-button"
 template = "link"
-url = "/get-started-for-free-endpoint"
+url = "/#get-started-for-free-endpoint"
 
 +++
