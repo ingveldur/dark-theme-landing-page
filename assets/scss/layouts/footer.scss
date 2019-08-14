@@ -3,19 +3,26 @@
 
 
 footer {
+    position: relative;
+    margin: 40px auto 80px;
+    width: 860px;
     display: grid;
-    align-items: center;
-    grid-gap: 16px;
-    grid-template-areas:
-        "logo . ."
-        "left-block center-block right-block";
+    align-items: flex-start;
+    row-gap: 16px;
+    column-gap: 60px;
+    grid-template-columns: 450px 185px 105px;
+    grid-template-areas: "logo . .""left-block center-block right-block";
+    font-size: 12px;
+    line-height: 16px;
 
     @include smallerThanDesktop {
         grid-template-areas:
             "logo"
             "left-block"
-            "right-block"
-            "center-block";
+            "center-block"
+            "right-block";
+        max-width: 400px;
+        margin: 30px auto 80px;
     }
 
     .logo {
@@ -35,8 +42,6 @@ footer {
     .left-block {
         grid-area: left-block;
         display: flex;
-        font-size: 12px;
-        line-height: 16px;
         margin-bottom: 16px;
 
         img {
@@ -46,20 +51,12 @@ footer {
             @include smallerThanDesktop {}
         }
 
-        .sub-block-1 {
-            width: 400px;
-            margin-right: 32px;
-        }
-
-        .sub-block-2 {
-            width: 250px;
-        }
-
         .sub-block-1,
         .sub-block-2>* {
             display: flex;
             align-items: flex-start;
             margin-bottom: 16px;
+            margin-right: 32px;
 
             .description {
                 margin-left: 8px;
@@ -71,7 +68,6 @@ footer {
     .center-block {
         grid-area: center-block;
         column-count: 2;
-        column-gap: 20px;
 
         .link {
             margin-bottom: 12px;
@@ -80,5 +76,13 @@ footer {
 
     .right-block {
         grid-area: right-block;
+        display: flex;
+
+        .link a .icon {
+            width: 24px;
+            filter: invert(1);
+
+            @include smallerThanDesktop {}
+        }
     }
 }

@@ -43,13 +43,19 @@
         {{ end }}
     </div>
     <div class="right-block">
-        block 3
+
+        {{ if eq .slug "footer-block-3" }}
+
+        {{ range .items}}
+        {{ partial "components/link.html" . }}
+        {{ end }}
+        {{ end }}
     </div>
     {{ end }}
     {{ end }}
     {{ end }}
 </footer>
-
+</footer>
 
 </body>
 
