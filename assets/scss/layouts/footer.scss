@@ -70,6 +70,12 @@ footer {
 
     .center-block {
         grid-area: center-block;
+        column-count: 2;
+        column-gap: 20px;
+
+        .link {
+            margin-bottom: 12px;
+        }
     }
 
     .right-block {
