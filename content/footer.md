@@ -65,10 +65,10 @@ template = "link"
 url = "/contact-us"
 [[blocks.blocks.items]]
 icon = ""
-label = ""
-slug = ""
+label = "Terms"
+slug = "terms-link"
 template = "link"
-url = ""
+url = "/terms"
 [[blocks.blocks.items]]
 icon = ""
 label = "Privacy"
