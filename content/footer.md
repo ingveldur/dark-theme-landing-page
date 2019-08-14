@@ -38,7 +38,7 @@ icon = ""
 label = " About Us"
 slug = "about-us-link"
 template = "link"
-url = " /about-us"
+url = "/about-us"
 [[blocks.blocks.items]]
 icon = ""
 label = "Jobs"
