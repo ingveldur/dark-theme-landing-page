@@ -4,9 +4,10 @@
     <div class="logo">
         <img src="{{ .logo }}" />
     </div>
+    {{ range .blocks }}
+    {{ if eq .slug "footer-block-1" }}
     <div class="left-block">
-        {{ range .blocks }}
-        {{ if eq .slug "footer-block-1" }}
+
         {{ $locationItem := index (.items) 0 }}
         {{ $phoneItem := index (.items) 1 }}
         {{ $emailItem := index (.items) 2 }}
@@ -32,25 +33,19 @@
             </div>
         </div>
     </div>
-    {{ end }}
-    </div>
+    {{ else if  eq .slug "footer-block-2" }}
     <div class="center-block">
-        {{ if eq .slug "footer-block-2" }}
-
         {{ range .items}}
         {{ partial "components/link.html" . }}
         {{ end }}
-        {{ end }}
     </div>
+    {{ else if eq .slug "footer-block-3" }}
     <div class="right-block">
-
-        {{ if eq .slug "footer-block-3" }}
-
         {{ range .items}}
         {{ partial "components/link.html" . }}
         {{ end }}
-        {{ end }}
     </div>
+    {{ end }}
     {{ end }}
     {{ end }}
     {{ end }}
