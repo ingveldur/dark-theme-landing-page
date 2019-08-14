@@ -1,0 +1,78 @@
+@import "./utils/colors.scss";
+@import "./utils/mixins.scss";
+
+
+footer {
+    display: grid;
+    align-items: center;
+    grid-gap: 16px;
+    grid-template-areas:
+        "logo . ."
+        "left-block center-block right-block";
+
+    @include smallerThanDesktop {
+        grid-template-areas:
+            "logo"
+            "left-block"
+            "right-block"
+            "center-block";
+    }
+
+    .logo {
+        grid-area: logo;
+
+        @include smallerThanDesktop {}
+
+        img {
+            width: 100px;
+
+            @include smallerThanDesktop {
+                width: 80px;
+            }
+        }
+    }
+
+    .left-block {
+        grid-area: left-block;
+        display: flex;
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 16px;
+
+        img {
+            width: 18px;
+            filter: invert(1);
+
+            @include smallerThanDesktop {}
+        }
+
+        .sub-block-1 {
+            width: 400px;
+            margin-right: 32px;
+        }
+
+        .sub-block-2 {
+            width: 250px;
+        }
+
+        .sub-block-1,
+        .sub-block-2>* {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 16px;
+
+            .description {
+                margin-left: 8px;
+            }
+        }
+    }
+
+
+    .center-block {
+        grid-area: center-block;
+    }
+
+    .right-block {
+        grid-area: right-block;
+    }
+}

@@ -1,6 +1,52 @@
 <footer>
+    {{ with .Site.GetPage "/footer" }}
+    {{ range.Params.Blocks }}
+    <div class="logo">
+        <img src="{{ .logo }}" />
+    </div>
+    <div class="left-block">
+        {{ range .blocks }}
+        {{ if eq .slug "footer-block-1" }}
+        {{ $locationItem := index (.items) 0 }}
+        {{ $phoneItem := index (.items) 1 }}
+        {{ $emailItem := index (.items) 2 }}
 
+        <div class="sub-block-1">
+            <img src="{{ $locationItem.image }}" />
+            <div class="description">
+                {{ $locationItem.description}}
+            </div>
+        </div>
+        <div class="sub-block-2">
+            <div>
+                <img src="{{ $phoneItem.image }}" />
+                <div class="description">
+                    {{ $phoneItem.description}}
+                </div>
+            </div>
+            <div>
+                <img src="{{ $emailItem.image }}" />
+                <div class="description">
+                    {{ $emailItem.description}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+    {{ end }}
+    </div>
+    <div class="center-block">
+        block 2
+    </div>
+    <div class="right-block">
+        block 3
+    </div>
+
+    {{ end }}
+    {{ end }}
 </footer>
+
+
 </body>
 
 </html>
