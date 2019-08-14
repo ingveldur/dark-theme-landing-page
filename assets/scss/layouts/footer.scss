@@ -5,12 +5,12 @@
 footer {
     position: relative;
     margin: 40px auto 80px;
-    width: 860px;
+    width: 1000px;
     display: grid;
     align-items: flex-start;
     row-gap: 16px;
     column-gap: 60px;
-    grid-template-columns: 450px 185px 105px;
+    grid-template-columns: 500px 250px 130px;
     grid-template-areas: "logo . .""left-block center-block right-block";
     font-size: 12px;
     line-height: 16px;
@@ -21,8 +21,14 @@ footer {
             "left-block"
             "center-block"
             "right-block";
-        max-width: 400px;
+        grid-template-columns: unset;
+        row-gap: unset;
+        column-gap: unset;
+        max-width: 100%;
+        width: 600px;
         margin: 30px auto 80px;
+        font-size: 15px;
+        line-height: 21px;
     }
 
     .logo {
@@ -34,7 +40,8 @@ footer {
             width: 100px;
 
             @include smallerThanDesktop {
-                width: 80px;
+                width: 150px;
+                margin-bottom: 30px;
             }
         }
     }
@@ -44,11 +51,19 @@ footer {
         display: flex;
         margin-bottom: 16px;
 
+        @include smallerThanDesktop {
+            display: block;
+            margin-bottom: 32px;
+        }
+
         img {
             width: 18px;
             filter: invert(1);
 
-            @include smallerThanDesktop {}
+            @include smallerThanDesktop {
+                margin-right: 16px;
+            }
+
         }
 
         .sub-block-1,
@@ -57,6 +72,10 @@ footer {
             align-items: flex-start;
             margin-bottom: 16px;
             margin-right: 32px;
+
+            @include smallerThanDesktop {
+                margin-right: unset;
+            }
 
             .description {
                 margin-left: 8px;
@@ -69,14 +88,34 @@ footer {
         grid-area: center-block;
         column-count: 2;
 
+        @include smallerThanDesktop {
+            column-count: unset;
+            margin-bottom: 32px;
+        }
+
         .link {
             margin-bottom: 12px;
+
+            @include smallerThanDesktop {
+                &:nth-child(4) {
+                    margin-bottom: 30px;
+                }
+
+                &:last-child {
+                    margin-bottom: 30px;
+                }
+            }
         }
     }
 
     .right-block {
         grid-area: right-block;
         display: flex;
+
+        @include smallerThanDesktop {
+            margin: auto;
+            margin-bottom: 32px;
+        }
 
         .link a .icon {
             width: 24px;
@@ -85,4 +124,8 @@ footer {
             @include smallerThanDesktop {}
         }
     }
+}
+
+footer>div {
+    margin: 0 16px;
 }
