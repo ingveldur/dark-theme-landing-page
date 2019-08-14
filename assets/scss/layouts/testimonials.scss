@@ -73,7 +73,7 @@
     width: 30px;
     height: 30px;
     content: "";
-    transform: translate(60%, -70%);
+    transform: translate(65%, -70%);
 
     @include smallerThanDesktop {
         transform: translate(50%, 70%)
@@ -89,7 +89,7 @@
     height: 30px;
     content: "";
     margin: auto 0 0;
-    transform: translate(-10%, 70%) rotate(180deg);
+    transform: translate(-65%, 70%) rotate(180deg);
 
     @include smallerThanDesktop {
         margin-left: 100%;
