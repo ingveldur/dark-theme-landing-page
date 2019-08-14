@@ -8,7 +8,6 @@
     align-items: center;
     justify-content: center;
 
-
     @include smallerThanDesktop {
         display: block;
         width: calc(100% - 50px);

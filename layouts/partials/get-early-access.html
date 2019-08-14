@@ -1,12 +1,14 @@
 <div class="get-early-access">
     {{ with .Site.GetPage "/get-early-access" }}
     {{ range.Params.Blocks }}
-
     <div class="title">{{.title}}</div>
     <div class="description">{{.description}}</div>
-    <input type="text" placeholder="example@example.com">
-    <a class="button" href="#">Get Started For Free</a>
-    {{/*  todo range link  */}}
+    <div class="foo">
+        <input type="text" placeholder="example@example.com">
+        {{ range.link }}
+        {{ partial "components/button.html" .}}
+        {{ end }}
+    </div>
     {{ end }}
     {{ end }}
 </div>
