@@ -3,125 +3,130 @@
 
 
 footer {
-    position: relative;
-    margin: 40px auto 80px;
-    width: 1000px;
-    display: grid;
-    align-items: flex-start;
-    row-gap: 16px;
-    column-gap: 60px;
-    grid-template-columns: 500px 250px 130px;
-    grid-template-areas: "logo . .""left-block center-block right-block";
-    font-size: 12px;
-    line-height: 16px;
+    background: $dark-blue-footer;
+    height: 100%;
+    padding: 16px;
 
-    @include smallerThanDesktop {
-        grid-template-areas:
-            "logo"
-            "left-block"
-            "center-block"
-            "right-block";
-        grid-template-columns: unset;
-        row-gap: unset;
-        column-gap: unset;
-        max-width: 100%;
-        width: 600px;
-        margin: 30px auto 80px;
-        font-size: 15px;
-        line-height: 21px;
-    }
-
-    .logo {
-        grid-area: logo;
-
-        @include smallerThanDesktop {}
-
-        img {
-            width: 100px;
-
-            @include smallerThanDesktop {
-                width: 150px;
-                margin-bottom: 30px;
-            }
-        }
-    }
-
-    .left-block {
-        grid-area: left-block;
-        display: flex;
-        margin-bottom: 16px;
+    .footer {
+        position: relative;
+        margin: 0 auto;
+        width: 1000px;
+        display: grid;
+        align-items: flex-start;
+        row-gap: 16px;
+        column-gap: 60px;
+        grid-template-columns: 500px 250px 130px;
+        grid-template-areas: "logo . .""left-block center-block right-block";
+        font-size: 12px;
+        line-height: 16px;
+        transform: translateY(-50px);
 
         @include smallerThanDesktop {
-            display: block;
-            margin-bottom: 32px;
+            grid-template-areas:
+                "logo"
+                "left-block"
+                "center-block"
+                "right-block";
+            grid-template-columns: unset;
+            row-gap: unset;
+            column-gap: unset;
+            max-width: 100%;
+            width: 600px;
+            font-size: 15px;
+            line-height: 21px;
         }
 
-        img {
-            width: 18px;
-            filter: invert(1);
-
-            @include smallerThanDesktop {
-                margin-right: 16px;
-            }
-
-        }
-
-        .sub-block-1,
-        .sub-block-2>* {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 16px;
-            margin-right: 32px;
-
-            @include smallerThanDesktop {
-                margin-right: unset;
-            }
-
-            .description {
-                margin-left: 8px;
-            }
-        }
-    }
-
-
-    .center-block {
-        grid-area: center-block;
-        column-count: 2;
-
-        @include smallerThanDesktop {
-            column-count: unset;
-            margin-bottom: 32px;
-        }
-
-        .link {
-            margin-bottom: 12px;
-
-            @include smallerThanDesktop {
-                &:nth-child(4) {
-                    margin-bottom: 30px;
-                }
-
-                &:last-child {
-                    margin-bottom: 30px;
-                }
-            }
-        }
-    }
-
-    .right-block {
-        grid-area: right-block;
-        display: flex;
-
-        @include smallerThanDesktop {
-            margin: auto;
-            margin-bottom: 32px;
-        }
-
-        .link a .icon {
-            width: 24px;
-            filter: invert(1);
+        .logo {
+            grid-area: logo;
 
             @include smallerThanDesktop {}
+
+            img {
+                width: 100px;
+
+                @include smallerThanDesktop {
+                    width: 150px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        .left-block {
+            grid-area: left-block;
+            display: flex;
+            margin-bottom: 16px;
+
+            @include smallerThanDesktop {
+                display: block;
+                margin-bottom: 32px;
+            }
+
+            img {
+                width: 18px;
+                filter: invert(1);
+
+                @include smallerThanDesktop {
+                    margin-right: 16px;
+                }
+
+            }
+
+            .sub-block-1,
+            .sub-block-2>* {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 16px;
+                margin-right: 32px;
+
+                @include smallerThanDesktop {
+                    margin-right: unset;
+                }
+
+                .description {
+                    margin-left: 8px;
+                }
+            }
+        }
+
+        .center-block {
+            grid-area: center-block;
+            column-count: 2;
+
+            @include smallerThanDesktop {
+                column-count: unset;
+                margin-bottom: 32px;
+            }
+
+            .link {
+                margin-bottom: 12px;
+
+                @include smallerThanDesktop {
+                    &:nth-child(4) {
+                        margin-bottom: 30px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+
+        .right-block {
+            grid-area: right-block;
+            display: flex;
+
+            @include smallerThanDesktop {
+                margin: auto;
+                margin-bottom: 32px;
+            }
+
+            .link a .icon {
+                width: 24px;
+                filter: invert(1);
+
+                @include smallerThanDesktop {}
+            }
         }
     }
 }

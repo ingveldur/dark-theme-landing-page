@@ -7,12 +7,15 @@
     background: $dark-blue;
     text-align: center;
     padding: 30px 20px;
-    margin: 40px auto 80px;
+    margin: 0 auto;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+    transform: translateY(-100px);
+
 
     @include smallerThanDesktop {
-        margin: 30px auto 80px;
-        max-width: calc(100% - 80px);
+        margin: 0 auto;
+        max-width: calc(100% - 40px);
+        transform: translateY(-130px);
     }
 
     .title {
@@ -40,7 +43,7 @@
         }
     }
 
-    .foo {
+    .form {
         display: flex;
         flex-direction: row;
         align-items: center;

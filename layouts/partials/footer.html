@@ -1,55 +1,59 @@
 <footer>
-    {{ with .Site.GetPage "/footer" }}
-    {{ range.Params.Blocks }}
-    <div class="logo">
-        <img src="{{ .logo }}" />
-    </div>
-    {{ range .blocks }}
-    {{ if eq .slug "footer-block-1" }}
-    <div class="left-block">
+    {{ partial "get-early-access.html" . }}
 
-        {{ $locationItem := index (.items) 0 }}
-        {{ $phoneItem := index (.items) 1 }}
-        {{ $emailItem := index (.items) 2 }}
-
-        <div class="sub-block-1">
-            <img src="{{ $locationItem.image }}" />
-            <div class="description">
-                {{ $locationItem.description  | markdownify }}
-            </div>
+    <div class="footer">
+        {{ with .Site.GetPage "/footer" }}
+        {{ range.Params.Blocks }}
+        <div class="logo">
+            <img src="{{ .logo }}" />
         </div>
-        <div class="sub-block-2">
-            <div>
-                <img src="{{ $phoneItem.image }}" />
+        {{ range .blocks }}
+        {{ if eq .slug "footer-block-1" }}
+        <div class="left-block">
+
+            {{ $locationItem := index (.items) 0 }}
+            {{ $phoneItem := index (.items) 1 }}
+            {{ $emailItem := index (.items) 2 }}
+
+            <div class="sub-block-1">
+                <img src="{{ $locationItem.image }}" />
                 <div class="description">
-                    {{ $phoneItem.description | markdownify }}
+                    {{ $locationItem.description  | markdownify }}
                 </div>
             </div>
-            <div>
-                <img src="{{ $emailItem.image }}" />
-                <div class="description">
-                    {{ $emailItem.description | markdownify }}
+            <div class="sub-block-2">
+                <div>
+                    <img src="{{ $phoneItem.image }}" />
+                    <div class="description">
+                        {{ $phoneItem.description | markdownify }}
+                    </div>
+                </div>
+                <div>
+                    <img src="{{ $emailItem.image }}" />
+                    <div class="description">
+                        {{ $emailItem.description | markdownify }}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    {{ else if  eq .slug "footer-block-2" }}
-    <div class="center-block">
-        {{ range .items}}
-        {{ partial "components/link.html" . }}
+        {{ else if  eq .slug "footer-block-2" }}
+        <div class="center-block">
+            {{ range .items}}
+            {{ partial "components/link.html" . }}
+            {{ end }}
+        </div>
+        {{ else if eq .slug "footer-block-3" }}
+        <div class="right-block">
+            {{ range .items}}
+            {{ partial "components/link.html" . }}
+            {{ end }}
+        </div>
+        {{ end }}
+        {{ end }}
+        {{ end }}
         {{ end }}
     </div>
-    {{ else if eq .slug "footer-block-3" }}
-    <div class="right-block">
-        {{ range .items}}
-        {{ partial "components/link.html" . }}
-        {{ end }}
-    </div>
-    {{ end }}
-    {{ end }}
-    {{ end }}
-    {{ end }}
-</footer>
+
 </footer>
 
 </body>
