@@ -54,35 +54,50 @@
             margin: 0 32px;
         }
 
-        input {
-            width: 300px;
-            max-width: 100%;
-            border-radius: 24px;
-            border: 0;
-            margin-right: 16px;
-            padding: 10px 20px;
-
+        .input {
             @include smallerThanDesktop {
+                display: flex;
                 width: 100%;
-                margin: 0 0 16px;
-                padding: 16px 20px;
+            }
+
+            input {
+                width: 300px;
+                max-width: 100%;
+                border-radius: 24px;
+                border: 0;
+                margin-right: 16px;
+                padding: 10px 20px;
+
+                @include smallerThanDesktop {
+                    width: 100%;
+                    margin: 0 0 16px;
+                    padding: 16px 20px;
+                }
+            }
+
+            input:focus {
+                outline: none;
+            }
+
+            input::placeholder {
+                color: lightgray;
             }
         }
 
-        input:focus {
-            outline: none;
-        }
-
-        input::placeholder {
-            color: lightgray;
-        }
-
-        a {
-            padding: 10px 20px;
+        .button {
 
             @include smallerThanDesktop {
+                display: flex;
                 width: 100%;
-                padding: 16px 20px;
+            }
+
+            a {
+                padding: 10px 20px;
+
+                @include smallerThanDesktop {
+                    width: 100%;
+                    padding: 16px 20px;
+                }
             }
         }
     }

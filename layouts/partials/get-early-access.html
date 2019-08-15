@@ -4,7 +4,9 @@
     <div class="title">{{.title}}</div>
     <div class="description">{{.description}}</div>
     <div class="form">
-        <input type="text" placeholder="example@example.com">
+        <div class="input">
+            <input type="text" placeholder="example@example.com">
+        </div>
         {{ range.link }}
         {{ partial "components/button.html" .}}
         {{ end }}

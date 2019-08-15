@@ -2,10 +2,20 @@
 @import "./utils/mixins.scss";
 
 .button {
-    background: linear-gradient(to bottom right, $color-cyan, $color-blue);
-    color: $color-white;
-    text-decoration: none;
-    padding: 12px 60px;
-    border-radius: 30px;
-    font-size: 12px;
+
+    transition: transform 0.4s linear;
+
+    a {
+        background: linear-gradient(to bottom right, $color-cyan, $color-blue);
+        color: $color-white;
+        text-decoration: none;
+        padding: 12px 60px;
+        border-radius: 30px;
+        font-size: 12px;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+
+    }
 }
