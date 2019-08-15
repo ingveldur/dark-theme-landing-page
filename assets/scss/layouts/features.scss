@@ -3,11 +3,12 @@
 
 .features {
     position: relative;
-    margin: 40px 24px 80px;
+    margin: auto;
+    background: $dark-blue-main;
 
     @include smallerThanDesktop {
         max-width: 400px;
-        margin: 30px auto 80px;
+        margin: 0 auto 80px;
     }
 
     .row {

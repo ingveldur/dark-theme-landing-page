@@ -4,10 +4,19 @@
 .intro {
     text-align: center;
     position: relative;
-    margin: 40px 24px 80px;
+    margin: auto;
+    padding-bottom: 150px;
+
+    background-color: $dark-blue;
+    background-image: url("/images/bg-curvy-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% 40%;
 
     @include smallerThanDesktop {
-        margin: 30px 16px 80px;
+        padding: 30px;
+        background-image: url("/images/bg-curvy-mobile.svg");
+        background-size: 100%;
     }
 
     img {

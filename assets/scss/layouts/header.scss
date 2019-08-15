@@ -8,6 +8,7 @@ header {
     align-items: center;
     width: 100%;
     height: 100px;
+    background-color: $dark-blue;
 
     @include smallerThanDesktop {
         height: 80px;
@@ -42,6 +43,10 @@ header {
 
         .link {
             margin-right: 32px;
+
+            @include smallerThanDesktop {
+                margin-right: 12px;
+            }
         }
     }
 }

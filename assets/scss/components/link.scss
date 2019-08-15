@@ -23,7 +23,7 @@
         }
 
         &:hover {
-            color: $color-blue;
+            color: #51CDEF;
             filter: invert(55%) sepia(83%) saturate(444%) hue-rotate(156deg) brightness(86%) contrast(84%);
         }
 
@@ -42,12 +42,12 @@
 
         &:hover {
             text-decoration: none;
-            color: $color-blue;
+            color: #51CDEF;
         }
 
         &:hover::after {
             right: 0;
-            border-color: $color-blue;
+            border-color: #51CDEF;
         }
 
         &::after {
@@ -69,7 +69,7 @@
 
         &:hover {
             text-decoration: none;
-            filter: invert(55%) sepia(83%) saturate(444%) hue-rotate(156deg) brightness(86%) contrast(84%);
+            filter: invert(55%) sepia(50%) saturate(404%) hue-rotate(156deg) brightness(156%) contrast(84%);
         }
     }
 }
