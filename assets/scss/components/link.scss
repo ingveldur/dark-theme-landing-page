@@ -2,14 +2,74 @@
 @import "./utils/mixins.scss";
 
 
-.link a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: $color-white;
+.link {
+    width: fit-content;
 
-    .icon {
+    .link-and-icon {
+        display: flex;
+        align-items: center;
+        position: relative;
+        text-decoration: none;
+        transition: color .4s ease-out, filter .4s ease-out;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 100%;
+            bottom: -0.3em;
+            left: 0;
+            width: 100%;
+            border: .05em solid;
+        }
+
+        &:hover {
+            color: $color-blue;
+            filter: invert(55%) sepia(83%) saturate(444%) hue-rotate(156deg) brightness(86%) contrast(84%);
+        }
+
+        .icon {
+            margin-left: 6px;
+            width: 12px;
+            filter: invert(81%) sepia(61%) saturate(364%) hue-rotate(113deg) brightness(94%) contrast(89%);
+        }
+    }
+
+    .only-label {
+        position: relative;
+        text-decoration: none;
+        color: $color-white;
+        transition: color .4s ease-out;
+
+        &:hover {
+            text-decoration: none;
+            color: $color-blue;
+        }
+
+        &:hover::after {
+            right: 0;
+            border-color: $color-blue;
+        }
+
+        &::after {
+            border-radius: 1em;
+            border-top: .1em solid $color-white;
+            content: "";
+            position: absolute;
+            right: 100%;
+            bottom: .01em;
+            left: 0;
+            transition: right .4s cubic-bezier(0, .5, 0, 1),
+                border-color .4s ease-out;
+        }
+    }
+
+    .only-icon {
         width: 16px;
-        margin-left: 8px;
+        transition: filter .4s ease-out;
+
+        &:hover {
+            text-decoration: none;
+            filter: invert(55%) sepia(83%) saturate(444%) hue-rotate(156deg) brightness(86%) contrast(84%);
+        }
     }
 }

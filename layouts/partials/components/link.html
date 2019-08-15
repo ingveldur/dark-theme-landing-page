@@ -1,5 +1,17 @@
 <div class="link">
-    <a href="{{ .url }}">{{ .label }}
+    {{ $hasLabel := not (eq .label "") }}
+    {{ $hasIcon := not (eq .icon "") }}
+    {{ $onlyLabel :=  (not $hasIcon) and $hasLabel }}
+    {{ $onlyIcon :=  (not $hasLabel) and $hasIcon }}
+
+    <a class="{{ if $onlyIcon }}only-icon{{ else if $onlyLabel }}only-label{{ else if eq $hasLabel $hasIcon}}link-and-icon{{ end }}"
+        href="{{ .url }}">
+        {{ if $hasLabel }}
+        {{ .label }}
+        {{ end }}
+
+        {{ if $hasIcon }}
         <img class="icon" src="{{ .icon }}" />
+        {{ end }}
     </a>
 </div>

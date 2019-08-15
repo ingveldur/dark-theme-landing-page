@@ -121,11 +121,13 @@ footer {
                 margin-bottom: 32px;
             }
 
+            .link {
+                margin-right: 8px;
+            }
+
             .link a .icon {
                 width: 24px;
                 filter: invert(1);
-
-                @include smallerThanDesktop {}
             }
         }
     }
