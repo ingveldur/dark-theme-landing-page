@@ -2,7 +2,7 @@
 
 - A dark theme landing page coded using static site generator framework Hugo
 - All content is managed using Forestry CMS
-- Deployed using <a href="https://www.netlify.com/">Netlify</a>
+- Deployed with <a href="https://www.netlify.com/">Netlify</a>
 
 ### <strong>Coded by</strong>: <a href="https://github.com/ingveldur/">Ingveldur Dís Heiðarsdóttir</a>
 
